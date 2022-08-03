@@ -22,7 +22,6 @@ const CustomListItem = ({ id, chatName, enterChat }) => {
 		<ListItem
 			key={id}
 			onPress={() => enterChat(id, chatName)}
-			key={id}
 			bottomDivider
 		>
 			<Avatar
@@ -30,7 +29,7 @@ const CustomListItem = ({ id, chatName, enterChat }) => {
 				source={{
 					uri:
 						chatMessages?.[0]?.photoURL ||
-						"http://www.cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png",
+						"https://miro.medium.com/max/1400/1*_hKoQk81SBfHD0_XiHlX4w.png",
 				}}
 			/>
 

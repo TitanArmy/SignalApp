@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
 			headerTintColor: "black",
 			headerLeft: () => (
 				<View style={{ marginLeft: 20 }}>
-					<TouchableOpacity activeOpacity={0.5} onPress={signOut}>
+					<TouchableOpacity activeOpacity={0.5}  onPress={signOut}>
 						<Avatar rounded source={{ uri: auth?.currentUser?.photoURL }} />
 					</TouchableOpacity>
 				</View>
@@ -48,7 +48,9 @@ const HomeScreen = ({ navigation }) => {
 						marginRight: 20,
 					}}
 				>
-					<TouchableOpacity activeOpacity={0.5}>
+					<TouchableOpacity activeOpacity={0.5}
+					onPress={() => navigation.navigate('Camera')}
+					>
 						<AntDesign name="camerao" size={24} color="black" />
 					</TouchableOpacity>
 					<TouchableOpacity

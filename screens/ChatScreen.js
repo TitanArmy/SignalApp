@@ -16,7 +16,7 @@ import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { auth, db } from "../firebase";
-import * as firebase from "firebase";
+import firebase from "firebase";
 
 const ChatScreen = ({ navigation, route }) => {
 	const [input, setInput] = useState("");
@@ -122,7 +122,7 @@ const ChatScreen = ({ navigation, route }) => {
 												right: -5,
 												bottom: -10,
 											}}
-											size={20}
+											size={20}        
 											bottom={-10}
 											right={-5}
 											source={{ uri: data.photoURL }}
@@ -130,7 +130,7 @@ const ChatScreen = ({ navigation, route }) => {
 										<Text style={styles.recieverText}>{data.message}</Text>
 									</View>
 								) : (
-									<View key={id} style={styles.sender} key={id}>
+									<View key={id} style={styles.sender}>
 										<Avatar
 											rounded
 											position="absolute"
@@ -146,7 +146,7 @@ const ChatScreen = ({ navigation, route }) => {
 											source={{ uri: data.photoURL }}
 										/>
 										<Text style={styles.senderText}>{data.message}</Text>
-										<Text style={styles.senderName}>{data.displayName}</Text>
+										{/* <Text style={styles.senderName}>{data.displayName}</Text> */}
 									</View>
 								)
 							)}
